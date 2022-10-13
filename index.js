@@ -1,27 +1,18 @@
-/*Given a number as an input, print out every integer from 1 to that number. However, when the integer is divisible by 3, print out “Fizz”; when it’s divisible by 5, print out “Buzz”; when it’s divisible by both 3 and 5, print out “Fizz Buzz”.*/
+// Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
 
-//integer -> whole, positive, no funny biz, 1 number, type number
 
-//num -> 3 things, print "Fizz", "Buzz" or "Fizz Buzz", number
 
-function fizzBuzz(num) {
-  for (let i = 1; i <= num; i++) {
-    if (i % 15 === 0) {
-      console.log("Fizz Buzz")
-    } else if (i % 5 === 0) {
-      console.log("Buzz")
-    } else if (i % 3 === 0) {
-      console.log("Fizz")
-    } else {
-      console.log(i)
-    }
-  }
+// always a string, 1 string, no spaces, any symbol, never empty
+// str-> string, no spaces, console log the string, exact same outputed
+
+function domainName(url){
+  return url.replace('https://','').replace('http://','').replace('www.','').split('.')[0]
+  // replace the stuff upfront
+  
+  //split and grab the first value 
 }
 
 
-
-fizzBuzz(2)
-fizzBuzz(5)
-fizzBuzz(3)
-fizzBuzz(15)
-
+console.log(domainName("http://github.com/carbonfive/raygun"), "github")
+console.log(domainName("http://www.zombie-bites.com"), "zombie-bites")
+console.log(domainName("https://www.cnet.com"), "cnet")
